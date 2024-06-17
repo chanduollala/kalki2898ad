@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {Theatre} from "../../global";
-import {Howl} from "howler";
 
 @Component({
   selector: 'app-theatre-notification',

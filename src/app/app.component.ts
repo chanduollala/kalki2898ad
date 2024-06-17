@@ -1,11 +1,9 @@
-import {AfterViewInit, Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgClass} from "@angular/common";
 import {WsService} from "../services/ws/ws.service";
 import {ConnectionStatus, Theatre} from "../global";
 import {TheatreNotificationComponent} from "./theatre-notification/theatre-notification.component";
-import {count} from "rxjs";
-import {Howl} from "howler";
 
 
 
@@ -25,7 +23,7 @@ export class AppComponent implements OnInit{
   bookingChannelStatus: ConnectionStatus = 'INACTIVE';
   subscriber_count : number = 0;
 
-  constructor(private wsService: WsService, private resolver: ComponentFactoryResolver) {
+  constructor(private wsService: WsService) {
   }
 
   ngOnInit(): void {
