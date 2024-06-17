@@ -1,0 +1,32 @@
+.toolbar{
+  height: 48px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.connected{
+}
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.green {
+  background-color: rgba(0, 138, 0, 0.84);
+}
+
+.yellow {
+  background-color: rgba(255, 153, 0, 0.85);
+}
+
+.red {
+  background-color: #fa2525;
+}
+
+

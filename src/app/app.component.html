@@ -1,1 +1,38 @@
-<div></div>
+<div class="toolbar center">
+  <div class="connected center">
+    <p class="s-text">
+      @if(status=='ACTIVE') { Connected }
+      @else if (status=='CONNECTING') { Connecting }
+      @else { Offline }
+    </p>
+    <div class="status-indicator" [ngClass]="status=='ACTIVE'?'green': status=='CONNECTING'?'yellow':'red'"></div>
+  </div>
+  <div style="position: fixed ; right: 10px;">
+    <a href="https://www.buymeacoffee.com/chandupromax" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important;" ></a>
+  </div>
+</div>
+
+<div style="margin-top: 48px; " class="center column">
+  @if (status=='ACTIVE'){
+    <div class="container1 center column">
+      <div class="xs-text">Now checking</div>
+      <div style="margin-top: 8px" class="l-text">Kalki 2898AD</div>
+      <div style="margin-top: 8px" class="xs-text">Live subscriber count : {{subscriber_count}}</div>
+    </div>
+
+    <div class="container1 center column" >
+      <div #notifications id="notifications"></div>
+    </div>
+
+  }
+  @else if (status=='CONNECTING') {
+    <div class="loader" style="margin-top: 20vh"></div>
+  }
+  @else {
+    <div style="margin-top: 20vh" class="center column">
+      <p>You're not connected to the server.</p>
+      <button class="button1 center">Reconnect</button>
+      <p class="xs-text">Automatically retrying in 30 secs</p>
+    </div>
+  }
+</div>

@@ -1,0 +1,21 @@
+<div class="box">
+  <div class="row">
+    @if (theatre.type == 'T')
+    {
+      <div class="xs-text" >New theatre added</div>
+    } @else if (theatre.type == 'S')
+    {
+      <div class="xs-text">New shows added</div>
+    }
+    <div style="flex: 1"></div>
+    <div style="font-size: 14px">{{addTime}}</div>
+  </div>
+
+  <div style="margin-top: 8px; max-lines: 1; overflow: hidden; font-size: 18px">{{ theatre.name }}</div>
+  <div style="margin-top: 5px" class="row">
+    @for (show of theatre.shows ; track show)
+    {
+      <div class="show-chip" >{{show}}</div>
+    }
+  </div>
+</div>
